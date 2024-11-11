@@ -42,12 +42,7 @@ A API permite criar, ler, atualizar e deletar registros em um banco de dados do 
 
 ## Configuração
 
-O projeto requer uma chave de API do Notion e o ID do banco de dados para funcionar. Eles já estão configurados no repositório para este desafio, mas em um projeto real, seriam armazenados em variáveis de ambiente.
-
-```javascript
-const notion = new Client({ auth: 'ntn_O35402416574dg7rojwpyRwVPcKnWaiyIfqPeySBshC7pS' });
-const databaseId = '1290d303ccf9808d8697f7a3dc42ef3f';
-```
+A chave de API do Notion e o ID do banco de dados são fornecidos em um arquivo separado cedido pela empresa. Em um projeto real, esses valores geralmente são armazenados em variáveis de ambiente.
 
 ## Estrutura do Projeto
 
@@ -158,7 +153,7 @@ A API estará disponível em `http://localhost:3000`.
 
 ## Contato
 
-Para dúvidas ou sugestões, entre em contato com [seu-email@exemplo.com](mailto:seu-email@exemplo.com).
+Para dúvidas ou sugestões, entre em contato com [jvleao87@gmail.com](mailto:jvleao87@gmail.com).
 
 ---
 
