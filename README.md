@@ -42,7 +42,7 @@ A API permite criar, ler, atualizar e deletar registros em um banco de dados do 
 
 ## Configuração
 
-A chave de API do Notion e o ID do banco de dados são fornecidos em um arquivo separado cedido pela empresa. Em um projeto real, esses valores geralmente são armazenados em variáveis de ambiente.
+O projeto requer uma chave de API do Notion e o ID do banco de dados para funcionar. Eles estão armazenados em um arquivo separado, conforme cedido pela empresa.
 
 ## Estrutura do Projeto
 
@@ -74,21 +74,87 @@ desafio-notion-api/
 ### 1. Criar um novo registro
 - **Rota**: `POST /create`
 - **Descrição**: Cria um novo registro no banco de dados do Notion.
-- **Parâmetros**: Corpo da requisição deve conter `properties` (objeto com os dados do registro).
+- **Parâmetros**: O corpo da requisição deve conter `properties` (objeto com os dados do registro).
 - **Exemplo de Requisição**:
   ```json
   POST /create
   {
     "properties": {
-      "Name": {
-        "title": [
-          {
-            "text": {
-              "content": "Novo Registro"
+        "Company": {
+            "title": [
+                {
+                    "text": {
+                        "content": "teste joão modificado"
+                    }
+                }
+            ]
+        },
+        "Campaign": {
+            "rich_text": [
+                {
+                    "text": {
+                        "content": "Nome da Campanha"
+                    }
+                }
+            ]
+        },
+        "Description": {
+            "rich_text": [
+                {
+                    "text": {
+                        "content": "Descrição da Campanha"
+                    }
+                }
+            ]
+        },
+        "PlannedDate": {
+            "date": {
+                "start": "2024-11-10"
             }
-          }
-        ]
-      }
+        },
+        "Where": {
+            "rich_text": [
+                {
+                    "text": {
+                        "content": "Facebook"
+                    }
+                }
+            ]
+        },
+        "Language": {
+            "select": {
+                "name": "English"
+            }
+        },
+        "Content": {
+            "rich_text": [
+                {
+                    "text": {
+                        "content": "Conteúdo do Exemplo"
+                    }
+                }
+            ]
+        },
+        "image content": {
+            "rich_text": [
+                {
+                    "text": {
+                        "content": "https://link-da-imagem.com/exemplo.jpg"
+                    }
+                }
+            ]
+        },
+        "Image": {
+            "files": [
+                {
+                    "type": "external",
+                    "name": "Imagem Exemplo",
+                    "external": {
+                        "url": "https://link-da-imagem.com/exemplo.jpg"
+                    }
+                }
+            ]
+        }
     }
   }
   ```
